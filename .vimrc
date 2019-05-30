@@ -25,32 +25,16 @@ set incsearch " do incremental search
 set smartcase " ...unless capital letters are used
 set number
 
-set t_Co=256
-
 " file type specific settings
 filetype on " enable file type detection
 filetype plugin on " load the plugins for specific file types
 filetype indent on " automatically indent code
 
-let g:solarized_termcolors=256
-let g:solarized_contrast="high"
-let g:solarized_visibility="high"
-syntax enable " enable syntax highlighting
+syntax enable
 set background=dark " dark background for console
-colorscheme blue
-
-" set fg for error highlighting
-highlight Error ctermfg=white
-" characters for displaying non-printable characters
-set listchars=eol:$,tab:>-,trail:.,nbsp:_,extends:+,precedes:+
-
-" tuning for gVim only
-if has('gui_running')
-        set background=light " light background for GUI
-        set columns=84 lines=48 " GUI window geometry
-        set guifont=Monospace\ 12 " font for GUI window
-        set number " show line numbers
-endif
+let g:solarized_termcolors=256
+let g:solarized_termtrans=1
+colorscheme solarized
 
 " automatic commands
 if has('autocmd')

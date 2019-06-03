@@ -173,8 +173,8 @@ bindsym $mod+Ctrl+7 move container to workspace $ws7
 bindsym $mod+Ctrl+8 move container to workspace $ws8
 
 # scroll workspaces with mouse
-bindsym --whole-window $mod+button4 workspace next_on_output
-bindsym --whole-window $mod+button5 workspace prev_on_output
+bindsym --whole-window $mod+button4 workspace prev_on_output
+bindsym --whole-window $mod+button5 workspace next_on_output
 
 # Move to workspace with focused container
 bindsym $mod+Shift+1 move container to workspace $ws1; workspace $ws1

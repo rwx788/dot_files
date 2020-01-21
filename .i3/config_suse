@@ -131,6 +131,9 @@ bindsym $mod+i workspace $ws13
 bindsym $mod+o workspace $ws14
 bindsym $mod+p workspace $ws15
 
+# navigate workspaces next / previous
+bindsym $mod+Ctrl+Right workspace next
+bindsym $mod+Ctrl+Left workspace prev
 # scroll workspaces with mouse
 bindsym --whole-window $mod+button4 workspace prev_on_output
 bindsym --whole-window $mod+button5 workspace next_on_output

@@ -15,6 +15,12 @@ set $mod Mod4
 exec --no-startup-id nm-applet
 # Start pulse audio applet
 exec --no-startup-id pa-applet
+# Auto change display conf
+exec_always --no-startup-id srandrd autorandr -c
+# Set keyboard layout
+exec_always --no-startup-id setxkbmap us,ru -option 'grp:alt_shift_toggle'
+# Set natural scrolling for the touchpad
+exec_always --no-startup-id xinput --set-prop "AlpsPS/2 ALPS DualPoint TouchPad" "libinput Natural Scrolling Enabled" 1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -167,22 +173,6 @@ mode "moveit" {
 }
 bindsym Mod4+m focus floating; mode "moveit"
 
-bindsym $mod+Escape mode "$mode_system"
-#set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
-#mode "$mode_system" {
-#    bindsym l exec --no-startup-id i3exit lock, mode "default"
-#    bindsym s exec --no-startup-id i3exit suspend, mode "default"
-#    bindsym u exec --no-startup-id i3exit switch_user, mode "default"
-#    bindsym e exec --no-startup-id i3exit logout, mode "default"
-#    bindsym h exec --no-startup-id i3exit hibernate, mode "default"
-#    bindsym r exec --no-startup-id i3exit reboot, mode "default"
-#    bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
-#
-#    # exit system mode: "Enter" or "Escape"
-#    bindsym Return mode "default"
-#    bindsym Escape mode "default"
-#}
-
 # Assign workspace to the screen
 set $primary "eDP-1"
 set $middle  "DP-1-1"
@@ -254,9 +244,3 @@ bar {
         status_command i3status
         tray_output    primary
 }
-
-# Auto change display conf
-exec --no-startup-id srandrd autorandr -c
-
-# Set keyboard layout
-exec_always --no-startup-id setxkbmap us,ru -option 'grp:alt_shift_toggle'

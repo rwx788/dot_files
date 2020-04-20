@@ -55,12 +55,6 @@ bindsym $mod+l exec ~/.config/i3/i3lock-fancy-multimonitor/lock --pixelate --no-
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
-# change focus
-#bindsym $mod+j focus left
-#bindsym $mod+k focus down
-#bindsym $mod+i focus up
-#bindsym $mod+m focus right
-
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down

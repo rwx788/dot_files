@@ -170,6 +170,7 @@ bindsym Mod4+m focus floating; mode "moveit"
 # Assign workspace to the screen
 set $primary "eDP-1"
 set $middle  "DP-1-1"
+set $right   "HDMI-1"
 set $right   "DP-1-2"
 
 workspace $ws1  output $primary

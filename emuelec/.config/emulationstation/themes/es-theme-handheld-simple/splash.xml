@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+  <formatVersion>7</formatVersion>
+  <include>./inc/globals.xml</include>
+  <view name="splash">
+    <splash name="splash">
+      <backgroundColor>${colorBlack}</backgroundColor>
+    </splash>
+    <image name="background">
+      <!-- Leave default for better OS/device portability -->
+    </image>
+    <image name="progressbar">
+      <color>${colorGrayDark}${opacity80P}</color>
+      <colorEnd>${colorGrayDark}${opacity80P}</colorEnd>
+      <roundCorners>0.01</roundCorners>
+    </image>
+    <image name="progressbar:active">
+      <color>${colorGrayLight}</color>
+      <colorEnd>${colorGrayLight}</colorEnd>
+    </image>
+    <text name="label">
+      <alignment>center</alignment>
+      <fontPath>./assets/fonts/RobotoCondensed-Regular.ttf</fontPath>
+      <fontSize>0.0425</fontSize>
+      <color>${colorWhite}</color>
+    </text>
+  </view>
+</theme>

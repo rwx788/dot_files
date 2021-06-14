@@ -34,7 +34,7 @@ syntax enable
 set background=dark " dark background for console
 let g:solarized_termcolors=256
 let g:solarized_termtrans=1
-colorscheme solarized
+colorscheme blue
 
 " automatic commands
 if has('autocmd')

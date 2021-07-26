@@ -12,7 +12,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/rwx788/.oh-my-zsh"
+export ZSH="/Users/rodion.iafarov/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -119,3 +119,10 @@ export DOTNET_ROOT="/usr/local/opt/dotnet/libexec"
 
 # Add /usr/local/bin to PATH
 export PATH=$PATH:/usr/local/bin
+
+# Add dotnet tools to PATH
+export PATH=$PATH:~/.dotnet/tools
+
+# Start gpg-agent if required
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+gpg-connect-agent /bye

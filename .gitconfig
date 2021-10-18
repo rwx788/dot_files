@@ -1,0 +1,8 @@
+[user]
+    name = rwx788
+[core]
+    editor = vim
+[diff]
+    tool = meld
+[merge]
+    tool = meld

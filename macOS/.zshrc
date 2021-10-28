@@ -87,7 +87,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-
+source ~/.profile
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -118,7 +118,7 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Set dotnet root
-export DOTNET_ROOT="/usr/local/opt/dotnet/libexec"
+export DOTNET_ROOT="$(dirname $(which dotnet))"
 
 # Add /usr/local/bin to PATH
 export PATH=$PATH:/usr/local/bin

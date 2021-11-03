@@ -126,6 +126,14 @@ export PATH=$PATH:/usr/local/bin
 # Add dotnet tools to PATH
 export PATH=$PATH:~/.dotnet/tools
 
-# Start gpg-agent if required
-export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-gpg-connect-agent /bye
+# Start ssh-agent if required, gpg if gpgconf is installed, ssh-agent otherwise
+if ($(which gpgconf &> /dev/null)) ; then
+  export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+  gpg-connect-agent /bye
+else
+  if [ ! -S ~/.ssh/ssh_auth_sock ]; then
+    eval `ssh-agent` &> /dev/null
+    ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
+  fi
+  export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
+fi

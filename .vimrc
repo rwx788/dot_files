@@ -35,6 +35,9 @@ set background=dark " dark background for console
 let g:solarized_termcolors=256
 let g:solarized_termtrans=1
 colorscheme blue
+" fix error highlighting
+highlight Error ctermfg=white
+
 
 " automatic commands
 if has('autocmd')

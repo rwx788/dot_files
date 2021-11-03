@@ -111,7 +111,7 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Start tmux
-[[ -z "$TMUX" ]] && tmux
+[[ -z "$TMUX" ]] && tmux new-session -d
 
 eval $(keychain -q --eval github_id_rsa)
 

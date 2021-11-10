@@ -128,8 +128,8 @@ export PATH=$PATH:~/.dotnet/tools
 
 # Start ssh-agent if required, gpg if gpgconf is installed, ssh-agent otherwise
 if ($(which gpgconf &> /dev/null)) ; then
-  export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-  gpg-connect-agent /bye
+  export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket &> /dev/null)
+  gpg-connect-agent /bye &> /dev/null
 else
   if [ ! -S ~/.ssh/ssh_auth_sock ]; then
     eval `ssh-agent` &> /dev/null

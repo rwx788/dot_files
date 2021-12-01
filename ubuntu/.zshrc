@@ -107,11 +107,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Start tmux
+[[ -z "$TMUX" && -z "$SSH_CONNECTION" ]] && tmux
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# Start tmux
-[[ -z "$TMUX" ]] && tmux
 
 eval $(keychain -q --eval github_id_rsa)
 

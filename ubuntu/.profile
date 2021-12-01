@@ -9,7 +9,9 @@
 #umask 022
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+
 alias boot2windows='sudo grub-reboot 2; sudo shutdown -r now'
+alias unity-hub='/usr/local/bin/UnityHub.AppImage &> /dev/null &'
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then

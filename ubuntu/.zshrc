@@ -113,6 +113,7 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-eval $(keychain -q --eval github_id_rsa)
-
 source ~/.profile
+
+# Keep it as last step, so it can be skipped and won't break anything after it
+eval $(keychain -q --eval github_id_rsa)

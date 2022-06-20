@@ -116,4 +116,4 @@ source $ZSH/oh-my-zsh.sh
 source ~/.profile
 
 # Keep it as last step, so it can be skipped and won't break anything after it
-eval $(keychain -q --eval github_id_rsa)
+eval $(/usr/bin/keychain -q --eval github_id_rsa)

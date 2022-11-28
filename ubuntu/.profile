@@ -35,3 +35,4 @@ fi
 # setup dotnet
 export DOTNET_ROOT=/usr/share/dotnet
 export PATH=$PATH:$DOTNET_ROOT
+export DOTNET_CLI_TELEMETRY_OPTOUT="true"

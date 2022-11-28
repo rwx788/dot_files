@@ -8,3 +8,4 @@ alias reset-dns='dscacheutil -flushcache; killall -HUP mDNSResponder'
 export JAVA_HOME='/Library/Java/JavaVirtualMachines/graalvm-ce-java17-21.3.0/Contents/Home'
 export PATH="$PATH:$JAVA_HOME/bin"
 export P4CONFIG='.pconfig'
+export DOTNET_CLI_TELEMETRY_OPTOUT="true"

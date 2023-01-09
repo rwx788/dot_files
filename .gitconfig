@@ -8,3 +8,5 @@
     tool = meld
 [init]
     defaultBranch = main
+[grep]
+    lineNumber = true

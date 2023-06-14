@@ -4,6 +4,7 @@ export LANG=en_US.UTF-8
 alias python='python3'
 alias pip='pip3'
 alias reset-dns='dscacheutil -flushcache; killall -HUP mDNSResponder'
+alias less='less -I'
 
 export JAVA_HOME=$(/usr/libexec/java_home -v 17)
 export PATH="$PATH:$JAVA_HOME/bin"

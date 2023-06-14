@@ -11,8 +11,9 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 alias boot2windows='sudo grub-reboot 2; sudo shutdown -r now'
 alias unity-hub='/usr/local/bin/UnityHub.AppImage &> /dev/null &'
-alias gsu='sudo XAUTHORITY=/home/rodion.iafarov/.Xauthority $1'
+alias gsu='sudo XAUTHORITY=$HOME/.Xauthority $1'
 alias msbuild='dotnet msbuild'
+alias less='less -I'
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then

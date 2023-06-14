@@ -5,7 +5,7 @@ alias python='python3'
 alias pip='pip3'
 alias reset-dns='dscacheutil -flushcache; killall -HUP mDNSResponder'
 
-export JAVA_HOME='/Library/Java/JavaVirtualMachines/graalvm-ce-java17-21.3.0/Contents/Home'
+export JAVA_HOME=$(/usr/libexec/java_home -v 17)
 export PATH="$PATH:$JAVA_HOME/bin"
 export P4CONFIG='.pconfig'
 export DOTNET_CLI_TELEMETRY_OPTOUT="true"

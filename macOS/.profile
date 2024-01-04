@@ -6,6 +6,7 @@ alias pip='pip3'
 alias reset-dns='dscacheutil -flushcache; killall -HUP mDNSResponder'
 alias less='less -I'
 alias reset-pinentry='gpg-connect-agent updatestartuptty /bye'
+alias reset-gpg-agent='pkill gpg-agent'
 
 export JAVA_HOME=$(/usr/libexec/java_home -v 17)
 export PATH="$PATH:$JAVA_HOME/bin"
